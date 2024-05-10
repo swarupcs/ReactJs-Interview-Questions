@@ -53,7 +53,7 @@ const Folder = ({handleInsertNode, explorer}) => {
           }
           {explorer.items.map((exp) => {
             // return <span>{exp.name}</span>   // rendering  only 1 level
-            return <Folder explorer={exp} key={exp.id}/>
+            return <Folder handleInsertNode={handleInsertNode} explorer={exp} key={exp.id}/>
           })}
         </div>
       </div>

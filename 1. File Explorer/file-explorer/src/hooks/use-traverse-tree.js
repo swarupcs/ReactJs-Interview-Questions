@@ -7,13 +7,31 @@ const useTraverseTree = () => {
                 isFolder,
                 items: []
             });
-            
+
             return tree;
         }
 
+        let latestNode = [];
+        latestNode = tree.items.map((ob) => {
+            return insertNode(ob, folderId, item, isFolder);
+        })
+
+        return { ...tree, items: latestNode};
+
     }
 
-    return { insertNode };
+    // TODO
+    const deleteNode = () => {
+
+    }
+
+    // TODO
+    const updateNode = () => {
+
+    }
+
+
+    return { insertNode, deleteNode, updateNode };
 }
 
 
